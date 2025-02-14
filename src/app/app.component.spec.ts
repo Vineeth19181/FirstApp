@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'chandu-angular' title`, () => {
+  it(`should have the 'my-property-app' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('chandu-angular');
+    expect(app.title).toEqual('my-property-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, chandu-angular');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, my-property-app');
   });
 });

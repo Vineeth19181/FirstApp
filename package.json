@@ -1,5 +1,5 @@
 {
-  "name": "chandu-angular",
+  "name": "my-property-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:chandu-angular": "node dist/chandu-angular/server/server.mjs"
+    "serve:ssr:my-property-app": "node dist/my-property-app/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +23,6 @@
     "@angular/ssr": "^19.1.5",
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
-    "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
