@@ -1,50 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PropertyCardComponent } from '../property-card/property-card.component';
 import { NgFor } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-property-list',
+  standalone:true,
   imports: [PropertyCardComponent,NgFor],
   templateUrl: './property-list.component.html',
-  styleUrl: './property-list.component.css'
+  styleUrls:['./property-list.component.css']
 })
-export class PropertyListComponent {
+export class PropertyListComponent implements OnInit{
+  properties: Array<any>=[];
 
-  properties: Array<any> = [
-    {
-      "Id":1,
-      "Name":"Individual House",
-      "Type":"House",
-      "Price":12000
+  constructor(private http: HttpClient){
+
+  }
+  ngOnInit(): void{
+  this.http.get<Array<any>>('Data/properties.json').subscribe(
+    (data)=>{
+      this.properties=data;
+      console.log('properties loaded',this.properties);
     },
-    {
-      "Id":1,
-      "Name":"Duplex",
-      "Type":"House",
-      "Price":13000
-    },
-    {
-      "Id":1,
-      "Name":"Farm House",
-      "Type":"House",
-      "Price":14000
-    },
-    {
-      "Id":1,
-      "Name":"Vineeth",
-      "Type":"House",
-      "Price":15000
-    },
-    {
-      "Id":1,
-      "Name":"Gopu",
-      "Type":"House",
-      "Price":16000
+    (error) =>{
+      console.error('Error fetching properties:', error)
     }
-            
-
-]
-
-
+  );
+  }
 
 }
