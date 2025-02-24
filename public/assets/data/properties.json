@@ -1,0 +1,33 @@
+[
+    {
+      "Id": 1,
+      "Type": "House1",
+      "Name": "Manshion House",
+      "Price": 100000
+    },
+    {
+      "Id": 2,
+      "Type": "House2",
+      "Name": "Other House",
+      "Price": 10000
+    },
+    {
+      "Id": 3,
+      "Type": "House3",
+      "Name": "OneMore House",
+      "Price": 900000
+    },
+    {
+      "Id": 4,
+      "Type": "House4",
+      "Name": "EvenMore House",
+      "Price": 1000
+    },
+    {
+      "Id": 5,
+      "Type": "House5",
+      "Name": "GodNomore House",
+      "Price": 1000000000
+    }
+
+  ]

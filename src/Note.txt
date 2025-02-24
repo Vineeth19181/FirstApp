@@ -1,0 +1,11 @@
+ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+
+  ng generate component  nav-bar
+
+  ng serve
+   ng g c property-card 
+
+   npm install popper.js --save
+   npm install bootstrap  
+
+    ng serve --open   

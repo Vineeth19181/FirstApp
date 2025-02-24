@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-property-app": {
+    "chandu-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-property-app",
+            "outputPath": "dist/chandu-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,13 +27,13 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
+             
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-
+           
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-property-app:build:production"
+              "buildTarget": "chandu-angular:build:production"
             },
             "development": {
-              "buildTarget": "my-property-app:build:development"
+              "buildTarget": "chandu-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,10 +89,16 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              "src/assets",
+             
+                "src/favicon.ico",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/assets"
+                
               }
+              
             ],
             "styles": [
               "src/styles.css"
@@ -104,6 +110,6 @@
     }
   },
   "cli": {
-    "analytics": "2c65165f-49b0-4862-8e6b-b706c9492eca"
+    "analytics": "a6c3a1ca-e526-406f-9ca6-7e4049a9e191"
   }
 }
